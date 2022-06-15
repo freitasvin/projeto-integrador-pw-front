@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -16,17 +15,6 @@ body {
     box-shadow: 0 0 7px grey;
 }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    height: 60px;
-    font-size: 14px;
-    font-weight: bolder;
-    vertical-align: middle;
-}
 
 .introduction {
     display: flex;
@@ -34,31 +22,6 @@ body {
     text-align: center;
     height: 100vh;
     justify-content: space-around;
-}
-
-.header img {
-    width: 30px;
-    height: 30px;
-}
-
-.home {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.home img {
-    margin-right: 15px;
-}
-
-.user {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.user img {
-    margin-left: 15px;
 }
 
 
