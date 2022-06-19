@@ -1,6 +1,6 @@
 import React from "react";
 
-function Warning() {
+function IntroductionFooter() {
     return (
         <div>
         <h3>Cadastre-se</h3>
@@ -9,4 +9,4 @@ function Warning() {
     )
 }
 
-export default Warning;
+export default IntroductionFooter;

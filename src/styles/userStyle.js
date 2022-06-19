@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const User = styled.div `
+export const UserStyle = styled.div `
     display: flex;
     flex-direction: row;
     align-items: center;
