@@ -5,12 +5,11 @@ import User from './User';
 import { HeaderStyle } from '../../styles/HeaderStyle';
 
 
-function Header(props) {
-
+function Header({homeBack = true, user = true}) {
     return (
         <HeaderStyle>
-            <HomeBack />
-            <User />
+            {homeBack && <HomeBack />}
+            {user && <User />}
         </HeaderStyle>
     )
 }

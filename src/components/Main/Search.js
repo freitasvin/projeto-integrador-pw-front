@@ -1,5 +1,5 @@
-import DropMenu from '../DropMenu';
-import SearchButton from './SearchButton';
+import DropMenu from '../Main/DropMenu';
+import SearchButton from '../Main/SearchButton';
 import { SearchStyle } from '../../styles/SearchStyle';
 
 

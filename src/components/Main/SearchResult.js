@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchResultStyle } from '../../styles/SearchResultStyle';
 import { SearchResultLabelStyle } from '../../styles/SearchResultLabelStyle';
-import locale from '../Images/Icons/Localização.png';
+import locale from '../../Images/Icons/Localização.png';
 
 function SearchResult(){
     return(

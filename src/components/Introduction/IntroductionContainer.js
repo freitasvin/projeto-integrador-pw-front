@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../Header/Header";
-import Introduction from "../../components/Introduction/Introduction";
+import Content from "./Content";
 import {IntroductionContainerStyle} from '../../styles/IntroductionContainerStyle';
 
-function IntroductionContainer() {
+function IntroductionContainer(props) {
     return (
     <IntroductionContainerStyle> {/* Esquerda*/}
-        <Header />
-        <Introduction />
+        <Header user={false} />
+        <Content />
     </IntroductionContainerStyle>
     )
 }

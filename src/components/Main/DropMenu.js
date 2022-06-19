@@ -1,4 +1,4 @@
-import { DropMenuStyle } from '../styles/DropMenuStyle';
+import { DropMenuStyle } from '../../styles/DropMenuStyle';
 
 function DropMenu(props) {
     return (

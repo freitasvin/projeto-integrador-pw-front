@@ -1,14 +1,14 @@
 import React from 'react';
-import IntroductionContainer from '../../components/IntroductionContainer';
-import MainContainer from '../../components/MainContainer';
+import IntroductionContainer from '../../components/Introduction/IntroductionContainer';
+import MainContainer from '../../components/Main/MainContainer';
 import { ContainerStyle } from '../../styles/ContainerStyle';
 
 
 function Home() {
     return (
         <ContainerStyle>
-            <IntroductionContainer />
-            <MainContainer />
+            <IntroductionContainer/>
+            <MainContainer/>
         </ContainerStyle>
     )
 }

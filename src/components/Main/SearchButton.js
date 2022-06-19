@@ -1,5 +1,5 @@
 import { SearchButtonStyle } from '../../styles/SearchButtonStyle';
-import SearchIcon from '../Images/Icons/Lupa.png';
+import SearchIcon from '../../Images/Icons/Lupa.png';
 
 function SearchButton() {
     return (

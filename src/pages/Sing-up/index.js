@@ -1,12 +1,16 @@
-import React from 'react';
 import IntroductionContainer from '../../components/Introduction/IntroductionContainer';
+import MainContainer from '../../components/Main/MainContainer';
 //import MainContainer from '../../components/MainContainer';
 import { ContainerStyle } from '../../styles/ContainerStyle';
 
-function Login() {
+function Login(props) {
+
+
     return (
         <ContainerStyle>
             <IntroductionContainer />
+
+            
         </ContainerStyle>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../Images/Nursery-Logo/logo-1.png';
-import IntroductionFooter from './IntroductionFooter';
 import { IntroductionStyle } from '../../styles/IntroductionStyle';
 import { LogoStyle } from '../../styles/LogoStyle';
 
@@ -24,7 +23,10 @@ function Introduction() {
             </span>
 
 
-            <IntroductionFooter/>
+            <div>
+                <h3>Cadastre-se</h3>
+                <h4>Usuário Comum | Diretor</h4>
+            </div>
             
         </IntroductionStyle>
     )
