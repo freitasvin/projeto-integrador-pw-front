@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const SearchResultStyle = styled.div`
     min-width: 780px;
     min-height: 330px;

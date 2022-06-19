@@ -1,18 +1,14 @@
-import IntroductionContainer from '../../components/Introduction/IntroductionContainer';
-import MainContainer from '../../components/Main/MainContainer';
-//import MainContainer from '../../components/MainContainer';
+import React from 'react';
+import { IntroductionContainer } from '../../components/Introduction';
 import { ContainerStyle } from '../../styles/ContainerStyle';
 
-function Login(props) {
+function Login() {
+  return (
+    <ContainerStyle>
+      <IntroductionContainer />
 
-
-    return (
-        <ContainerStyle>
-            <IntroductionContainer />
-
-            
-        </ContainerStyle>
-    )
+    </ContainerStyle>
+  );
 }
 
 export default Login;

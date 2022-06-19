@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchResultLabelStyle = styled.div `
+export const SearchResultLabelStyle = styled.div`
 
     display: flex;
     flex-direction: row;

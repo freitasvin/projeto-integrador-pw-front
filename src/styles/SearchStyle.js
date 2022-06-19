@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchStyle = styled.div `
+export const SearchStyle = styled.div`
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;

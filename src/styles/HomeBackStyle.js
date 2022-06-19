@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HomeBackStyle = styled.div`
     display: flex;
@@ -10,4 +10,4 @@ export const HomeBackStyle = styled.div`
     margin-right: 15px;
     }
 
-`
+`;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const IntroductionStyle = styled.div `
+export const IntroductionStyle = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;

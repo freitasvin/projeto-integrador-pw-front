@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const IntroductionContainerStyle = styled.div `
+export const IntroductionContainerStyle = styled.div`
     background: linear-gradient(180deg, #30DFF2 46.88%, #00ADC0 100%);
     display: flex;
     flex-direction: column;
