@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../Images/Nursery-Logo/logo-1.png';
 import {
   IntroductionContainerStyle, IntroductionStyle, LogoStyle, HeaderStyle,
@@ -10,7 +11,7 @@ export function IntroductionContainer({
   homeButton = true,
   userButton = true,
   footerWarning = false,
-  footerSingup = true,
+  footerSingup = false,
   title,
   subtitle,
 }) {
@@ -34,7 +35,9 @@ export function IntroductionContainer({
 
         {footerSingup && (
         <div>
-          <h3>Cadastre-se</h3>
+          <Link to="/sign-up" style={{ textDecoration: 'none', color: 'white' }}>
+            <h3>Cadastre-se</h3>
+          </Link>
         </div>
         )}
 

@@ -9,6 +9,7 @@ function Home() {
       <IntroductionContainer
         title="Bem-vindo"
         subtitle="Está procurando uma creche para seu filho(a)? Não perca tempo!"
+        footerSingup
       />
       <MainContainer />
     </ContainerStyle>

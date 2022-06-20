@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sing-up" element={<SingUp />} />
+          <Route path="/sign-up" element={<SingUp />} />
           <Route path="/*" element={<h1>Error 404 Not Found!</h1>} />
         </Routes>
       </BrowserRouter>

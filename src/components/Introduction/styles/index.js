@@ -22,7 +22,7 @@ export const IntroductionStyle = styled.div`
     text-align: center;
     flex-grow: 1;
     justify-content: space-between;
-    padding: 30% 20px 15px 20px;
+    padding: 30% 10% 5% 10%;
 
     h1 {
         font-size: 40px;
@@ -38,7 +38,6 @@ export const IntroductionStyle = styled.div`
     h3, h4 {
         font-weight: 200;
     }
-    
 `;
 
 export const HeaderStyle = styled.header`
