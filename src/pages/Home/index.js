@@ -1,7 +1,11 @@
 import React from 'react';
 import { IntroductionContainer } from '../../components/Introduction';
-import MainContainer from '../../components/Main/MainContainer';
-import { ContainerStyle } from '../../styles/ContainerStyle';
+import {
+  MainContainerStyle, SearchStyle, SearchResultStyle, SearchResultLabelStyle, ContainerStyle,
+} from './styles';
+import { DropMenu } from './DropMenu';
+import { SearchButton } from './SearchButton';
+import locale from '../../Images/Icons/Localização.png';
 
 function Home() {
   return (
@@ -11,7 +15,26 @@ function Home() {
         subtitle="Está procurando uma creche para seu filho(a)? Não perca tempo!"
         footerSingup
       />
-      <MainContainer />
+      <MainContainerStyle>
+
+        <SearchStyle>
+          <DropMenu type="UF" />
+          <DropMenu type="Cidade" />
+          <DropMenu type="Bairro" />
+          <SearchButton />
+        </SearchStyle>
+
+        <div>
+          <SearchResultLabelStyle>
+            <img src={locale} alt="locale" />
+            <span>
+              Creches disponíveis na sua região
+            </span>
+          </SearchResultLabelStyle>
+          <SearchResultStyle />
+        </div>
+
+      </MainContainerStyle>
     </ContainerStyle>
   );
 }

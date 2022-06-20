@@ -1,7 +1,7 @@
 import React from 'react';
-import { DropMenuStyle } from '../../styles/DropMenuStyle';
+import { DropMenuStyle } from './styles';
 
-function DropMenu({ type }) {
+export function DropMenu({ type }) {
   return (
     <DropMenuStyle type={type} aria-label={`${type} Select`}>
       <option>{type}</option>
@@ -11,5 +11,3 @@ function DropMenu({ type }) {
     </DropMenuStyle>
   );
 }
-
-export default DropMenu;
