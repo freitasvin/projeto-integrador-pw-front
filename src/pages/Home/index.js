@@ -6,7 +6,10 @@ import { ContainerStyle } from '../../styles/ContainerStyle';
 function Home() {
   return (
     <ContainerStyle>
-      <IntroductionContainer userButton={false} homeButton={false} />
+      <IntroductionContainer
+        title="Bem-vindo"
+        subtitle="Está procurando uma creche para seu filho(a)? Não perca tempo!"
+      />
       <MainContainer />
     </ContainerStyle>
   );

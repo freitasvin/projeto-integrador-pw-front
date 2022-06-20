@@ -9,6 +9,10 @@ import { UserButton } from './UserButton';
 export function IntroductionContainer({
   homeButton = true,
   userButton = true,
+  footerWarning = false,
+  footerSingup = true,
+  title,
+  subtitle,
 }) {
   return (
     <IntroductionContainerStyle>
@@ -24,26 +28,22 @@ export function IntroductionContainer({
           <LogoStyle>
             <img src={logo} alt="logo" />
           </LogoStyle>
-          <h1>
-            Bem-Vindo
-          </h1>
-          <h2>
-            Está procurando uma
-            {' '}
-            <br />
-            {' '}
-            creche para seu filho(a)?
-          </h2>
-
-          <h2>
-            Não perca tempo!
-          </h2>
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
         </span>
 
+        {footerSingup && (
         <div>
           <h3>Cadastre-se</h3>
-          <h4>Usuário Comum | Diretor</h4>
         </div>
+        )}
+
+        {footerWarning && (
+        <div>
+          <h2>ATENÇÃO</h2>
+          <h3>uma vez preenchido os dados nao poderão ser alterdos.</h3>
+        </div>
+        )}
       </IntroductionStyle>
     </IntroductionContainerStyle>
   );

@@ -22,7 +22,7 @@ export const IntroductionStyle = styled.div`
     text-align: center;
     flex-grow: 1;
     justify-content: space-between;
-    padding-top: 15%;
+    padding: 30% 20px 15px 20px;
 
     h1 {
         font-size: 40px;
