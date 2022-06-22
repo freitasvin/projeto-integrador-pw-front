@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../../Images/Nursery-Logo/logo-1.png';
 import {
-  IntroductionContainerStyle, IntroductionStyle, LogoStyle, HeaderStyle,
+  IntroductionContainerStyle, IntroductionStyle, LogoStyle, HeaderStyle, LinkStyled,
 } from './styles';
 import { HomeButton } from './HomeButton';
 import { UserButton } from './UserButton';
@@ -35,9 +34,9 @@ export function IntroductionContainer({
 
         {footerSingup && (
         <div>
-          <Link to="/sign-up" style={{ textDecoration: 'none', color: 'white' }}>
+          <LinkStyled to="/sign-up">
             <h3>Cadastre-se</h3>
-          </Link>
+          </LinkStyled>
         </div>
         )}
 

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const IntroductionContainerStyle = styled.div`
     background: linear-gradient(180deg, #30DFF2 46.88%, #00ADC0 100%);
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
+    min-width: 30%;
     color: white;
     box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
 `;
@@ -22,7 +24,7 @@ export const IntroductionStyle = styled.div`
     text-align: center;
     flex-grow: 1;
     justify-content: space-between;
-    padding: 30% 10% 5% 10%;
+    padding: 10% 10% 5% 10%;
 
     h1 {
         font-size: 40px;
@@ -77,4 +79,24 @@ export const UserButtonStyle = styled.div`
     img {
     margin-left: 15px;
     }
+`;
+
+export const LinkStyled = styled(Link)`
+    text-decoration: none;
+    color: white;
+    transition: border-bottom;
+
+    h3 {
+        font-size: 25px;
+        transition: border-bottom;
+
+        &:hover {
+            color: #a6b1b3
+        }
+    }
+
+ &:hover { 
+    border-bottom: solid 1px white;
+    }
+
 `;

@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LinkStyled, HomeButtonStyle } from './styles';
 import homeIcon from '../../Images/Icons/Home.png';
-import { HomeButtonStyle } from './styles';
 
 export function HomeButton() {
   return (
     <HomeButtonStyle>
-      <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+      <Link to="/">
         <img src={homeIcon} alt="home" />
-        <span>Home</span>
       </Link>
+
+      <LinkStyled to="/">
+        <span>Home</span>
+      </LinkStyled>
+
     </HomeButtonStyle>
   );
 }
