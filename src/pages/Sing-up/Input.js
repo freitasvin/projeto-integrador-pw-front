@@ -1,11 +1,16 @@
 import React from 'react';
 import { InputStyled } from './styles';
 
-export function Input({ inputId, inputLabel }) {
+export function Input({
+  inputId,
+  inputLabel,
+  size,
+  type,
+}) {
   return (
     <label htmlFor={inputId}>
       {inputLabel}
-      <InputStyled type="text" id={inputId} />
+      <InputStyled type={type} id={inputId} size={size} required="true" />
     </label>
   );
 }

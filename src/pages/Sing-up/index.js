@@ -1,7 +1,10 @@
 import React from 'react';
 import { IntroductionContainer } from '../../components/Introduction';
 import { Input } from './Input';
-import { ContainerStyle, MainStyle, FormStyled } from './styles';
+import { Select } from './Select';
+import {
+  ContainerStyle, MainStyle, FormStyled, BreakStyle, ItemStyle,
+} from './styles';
 
 function Login() {
   return (
@@ -15,50 +18,63 @@ function Login() {
       <MainStyle>
         <FormStyled>
           <h1>Informações Pessoais</h1>
+          <BreakStyle />
+          <ItemStyle>
+            <Input
+              type="text"
+              inputId="entire-name"
+              inputLabel="Nome Completo"
+              size="large"
+            />
+          </ItemStyle>
           <div className="break" />
-          <div className="item" style={{ flexGrow: 1 }}>
-            <Input inputId="entire-name" inputLabel="Nome Completo" />
-          </div>
-          <div className="break" />
-          <div className="item">
-            <label htmlFor="email">
-              Email
-              <input type="text" id="email" />
-            </label>
-          </div>
-          <div className="item">
-            <label htmlFor="phone">
-              Telefone
-              <input type="text" id="phone" />
-            </label>
-          </div>
-          <div className="item">
-            <label htmlFor="password">
-              Crie uma senha
-              <input type="password" id="password" />
-            </label>
-          </div>
-          <div className="item">
-            <label htmlFor="password-repeat">
-              Repita a senha
-              <input type="password" id="password-repeat" />
-            </label>
-          </div>
+          <ItemStyle>
+            <Input
+              type="email"
+              inputId="email"
+              inputLabel="E-mail"
+              size="medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Input
+              type="tel"
+              inputId="phone"
+              inputLabel="Telefone"
+              size="medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Input
+              type="password"
+              inputId="password"
+              inputLabel="Crie uma senha"
+              size="medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Input
+              type="password"
+              inputId="password-repeat"
+              inputLabel="Repita a senha"
+              size="medium"
+            />
+          </ItemStyle>
         </FormStyled>
 
         <FormStyled>
-          <h1>Informações do endereço</h1>
-          <label htmlFor="state">
-            Estado
-            <select type="" id="state">
-              <option defaultValue="0" selected hidden>Selecione</option>
-              <option value="1">Dois vizinhos</option>
-            </select>
-          </label>
-          <label htmlFor="city">
-            Cidade
-            <input type="text" id="city" />
-          </label>
+          <Select
+            type="text"
+            inputId="state"
+            inputLabel="Estado"
+            size="small"
+          />
+          <Select
+            type="text"
+            inputId="city"
+            inputLabel="Cidade"
+            size="small-medium"
+          />
           <label htmlFor="neighborhood">
             Bairro
             <input type="text" id="neighborhood" />
