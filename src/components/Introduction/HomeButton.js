@@ -11,7 +11,7 @@ export function HomeButton() {
       </Link>
 
       <LinkStyled to="/">
-        <span>Home</span>
+        <span>Inicio</span>
       </LinkStyled>
 
     </HomeButtonStyle>

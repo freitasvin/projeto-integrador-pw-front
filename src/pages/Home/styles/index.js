@@ -6,7 +6,7 @@ export const ContainerStyle = styled.div`
     height: 100vh;
 `;
 
-export const MainContainerStyle = styled.div`
+export const MainStyle = styled.div`
     flex-basis: 70%;
     display: flex;
     flex-direction: column;

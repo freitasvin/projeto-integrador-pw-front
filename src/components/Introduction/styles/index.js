@@ -66,7 +66,7 @@ export const HomeButtonStyle = styled.div`
 
 
     img {
-    margin-right: 15px;
+    margin-right: 13px;
     }
 
 `;

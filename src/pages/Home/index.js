@@ -1,7 +1,7 @@
 import React from 'react';
 import { IntroductionContainer } from '../../components/Introduction';
 import {
-  MainContainerStyle, SearchStyle, SearchResultStyle, SearchResultLabelStyle, ContainerStyle,
+  MainStyle, SearchStyle, SearchResultStyle, SearchResultLabelStyle, ContainerStyle,
 } from './styles';
 import { DropMenu } from './DropMenu';
 import { SearchButton } from './SearchButton';
@@ -15,7 +15,7 @@ export function Home() {
         subtitle="Está procurando uma creche para seu filho(a)? Não perca tempo!"
         footerSingup
       />
-      <MainContainerStyle>
+      <MainStyle>
 
         <SearchStyle>
           <DropMenu type="UF" />
@@ -34,7 +34,7 @@ export function Home() {
           <SearchResultStyle />
         </div>
 
-      </MainContainerStyle>
+      </MainStyle>
     </ContainerStyle>
   );
 }

@@ -1,9 +1,11 @@
 import React from 'react';
 import { IntroductionContainer } from '../../components/Introduction';
-import { Input } from './Input';
-import { Select } from './Select';
+import { FormInput } from '../../components/FormInput';
+import { FormSelect } from '../../components/FormSelect';
+import { FormAttachment } from '../../components/FormAttachment';
+import { FormSubmit } from '../../components/FormSubmit';
 import {
-  ContainerStyle, MainStyle, FormStyled, ItemStyle, SubmitStyled,
+  ContainerStyle, MainStyle, FormStyled,
 } from './styles';
 
 export function SingUp() {
@@ -17,112 +19,102 @@ export function SingUp() {
       />
 
       <MainStyle>
-        <FormStyled>
+        <FormStyled id="form1">
           <h1>Informações Pessoais</h1>
-          <ItemStyle>
-            <Input
-              type="text"
-              inputId="entire-name"
-              inputLabel="Nome Completo"
-              size="large"
-            />
-          </ItemStyle>
+          <FormInput
+            type="text"
+            inputId="entire-name"
+            inputLabel="Nome Completo"
+            size="large"
+          />
+
           <div className="break" />
-          <ItemStyle>
-            <Input
-              type="email"
-              inputId="email"
-              inputLabel="E-mail"
-              size="medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Input
-              type="tel"
-              inputId="phone"
-              inputLabel="Telefone"
-              size="medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Input
-              type="password"
-              inputId="password"
-              inputLabel="Crie uma senha"
-              size="medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Input
-              type="password"
-              inputId="password-repeat"
-              inputLabel="Repita a senha"
-              size="medium"
-            />
-          </ItemStyle>
+
+          <FormInput
+            type="email"
+            inputId="email"
+            inputLabel="E-mail"
+            size="medium"
+          />
+
+          <FormInput
+            type="tel"
+            inputId="phone"
+            inputLabel="Telefone"
+            size="medium"
+          />
+
+          <FormInput
+            type="password"
+            inputId="password"
+            inputLabel="Crie uma senha"
+            size="medium"
+          />
+
+          <FormInput
+            type="password"
+            inputId="password-repeat"
+            inputLabel="Repita a senha"
+            size="medium"
+          />
+
         </FormStyled>
 
-        <FormStyled>
+        <FormStyled id="form2">
           <h1>Informações do endereço</h1>
-          <ItemStyle>
-            <Select
-              type="text"
-              inputId="select-state"
-              inputLabel="Estado"
-              size="small"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Select
-              type="text"
-              inputId="select-city"
-              inputLabel="Cidade"
-              size="small-medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Select
-              type="text"
-              inputId="select-neighborhood"
-              inputLabel="Bairro"
-              size="medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Input
-              type="text"
-              inputId="house-number"
-              inputLabel="Nº da casa"
-              size="small"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Input
-              type="text"
-              inputId="postal-code"
-              inputLabel="CEP"
-              size="small-medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <Input
-              type="text"
-              inputId="complement"
-              inputLabel="Complemento"
-              size="medium"
-            />
-          </ItemStyle>
-          <ItemStyle>
-            <label htmlFor="address-proof">
-              Comprovante de residência
-              <input type="file" id="address-proof" />
-            </label>
-          </ItemStyle>
+
+          <FormSelect
+            type="text"
+            inputId="select-state"
+            inputLabel="Estado"
+            size="small"
+          />
+
+          <FormSelect
+            type="text"
+            inputId="select-city"
+            inputLabel="Cidade"
+            size="small-medium"
+          />
+
+          <FormSelect
+            type="text"
+            inputId="select-neighborhood"
+            inputLabel="Bairro"
+            size="medium"
+          />
+
+          <FormInput
+            type="text"
+            inputId="house-number"
+            inputLabel="Nº da casa"
+            size="small"
+          />
+
+          <FormInput
+            type="text"
+            inputId="postal-code"
+            inputLabel="CEP"
+            size="small-medium"
+          />
+
+          <FormInput
+            type="text"
+            inputId="complement"
+            inputLabel="Complemento"
+            size="medium"
+          />
+
+          <FormAttachment
+            inputId="address-proof"
+            inputLabel="Comprovante de residência"
+          />
         </FormStyled>
 
-        <ItemStyle>
-          <SubmitStyled type="submit" id="submitButton" value="Salvar" />
-        </ItemStyle>
+        <FormSubmit
+          inputId="submit"
+          value="Salvar"
+        />
 
       </MainStyle>
     </ContainerStyle>
