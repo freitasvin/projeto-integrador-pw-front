@@ -3,22 +3,22 @@ import { IntroductionContainer } from '../../components/Introduction';
 import { Input } from './Input';
 import { Select } from './Select';
 import {
-  ContainerStyle, MainStyle, FormStyled, BreakStyle, ItemStyle,
+  ContainerStyle, MainStyle, FormStyled, ItemStyle, SubmitStyled,
 } from './styles';
 
-function Login() {
+export function SingUp() {
   return (
     <ContainerStyle>
       <IntroductionContainer
         title="Cadastre-se"
         subtitle="Para realizar o seu cadastro preencha corretamente os campos ao lado!"
         footerWarning
+        userButton={false}
       />
 
       <MainStyle>
         <FormStyled>
           <h1>Informações Pessoais</h1>
-          <BreakStyle />
           <ItemStyle>
             <Input
               type="text"
@@ -63,39 +63,68 @@ function Login() {
         </FormStyled>
 
         <FormStyled>
-          <Select
-            type="text"
-            inputId="state"
-            inputLabel="Estado"
-            size="small"
-          />
-          <Select
-            type="text"
-            inputId="city"
-            inputLabel="Cidade"
-            size="small-medium"
-          />
-          <label htmlFor="neighborhood">
-            Bairro
-            <input type="text" id="neighborhood" />
-          </label>
-          <label htmlFor="house-number">
-            Nº da casa
-            <input type="text" id="house-number" />
-          </label>
-          <label htmlFor="postal-code">
-            CEP
-            <input type="text" id="postal-code" />
-          </label>
-          <label htmlFor="complement">
-            Complemento
-            <input type="text" id="complement" />
-          </label>
-
+          <h1>Informações do endereço</h1>
+          <ItemStyle>
+            <Select
+              type="text"
+              inputId="select-state"
+              inputLabel="Estado"
+              size="small"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Select
+              type="text"
+              inputId="select-city"
+              inputLabel="Cidade"
+              size="small-medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Select
+              type="text"
+              inputId="select-neighborhood"
+              inputLabel="Bairro"
+              size="medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Input
+              type="text"
+              inputId="house-number"
+              inputLabel="Nº da casa"
+              size="small"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Input
+              type="text"
+              inputId="postal-code"
+              inputLabel="CEP"
+              size="small-medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <Input
+              type="text"
+              inputId="complement"
+              inputLabel="Complemento"
+              size="medium"
+            />
+          </ItemStyle>
+          <ItemStyle>
+            <label htmlFor="address-proof">
+              Comprovante de residência
+              <input type="file" id="address-proof" />
+            </label>
+          </ItemStyle>
         </FormStyled>
+
+        <ItemStyle>
+          <SubmitStyled type="submit" id="submitButton" value="Salvar" />
+        </ItemStyle>
+
       </MainStyle>
     </ContainerStyle>
   );
 }
-
-export default Login;

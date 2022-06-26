@@ -7,7 +7,7 @@ export function HomeButton() {
   return (
     <HomeButtonStyle>
       <Link to="/">
-        <img src={homeIcon} alt="home" />
+        <img src={homeIcon} alt="homeIcon" />
       </Link>
 
       <LinkStyled to="/">

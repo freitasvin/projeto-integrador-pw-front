@@ -10,6 +10,7 @@ export function Select({
   return (
     <label htmlFor={inputId}>
       {inputLabel}
+      <br />
       <SelectStyled type={type} id={inputId} size={size} required="true">
         <option defaultValue="0" selected hidden> </option>
         <option value="1">Teste</option>

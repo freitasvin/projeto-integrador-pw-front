@@ -9,6 +9,7 @@ import { UserButton } from './UserButton';
 export function IntroductionContainer({
   homeButton = true,
   userButton = true,
+  introduction = true,
   footerWarning = false,
   footerSingup = false,
   title,
@@ -24,6 +25,7 @@ export function IntroductionContainer({
       </HeaderStyle>
 
       <IntroductionStyle>
+        {introduction && (
         <span>
           <LogoStyle>
             <img src={logo} alt="logo" />
@@ -31,6 +33,7 @@ export function IntroductionContainer({
           <h1>{title}</h1>
           <h2>{subtitle}</h2>
         </span>
+        )}
 
         {footerSingup && (
         <div>

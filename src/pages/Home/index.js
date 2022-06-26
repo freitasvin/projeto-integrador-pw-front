@@ -7,7 +7,7 @@ import { DropMenu } from './DropMenu';
 import { SearchButton } from './SearchButton';
 import locale from '../../Images/Icons/Localização.png';
 
-function Home() {
+export function Home() {
   return (
     <ContainerStyle>
       <IntroductionContainer
@@ -38,5 +38,3 @@ function Home() {
     </ContainerStyle>
   );
 }
-
-export default Home;

@@ -41,7 +41,6 @@ export const SearchResultLabelStyle = styled.div`
 
     span {
     font-size: 20px;
-    font-family: 'exo 2';
     font-weight: 500;
     color: #03B7DA;
     }

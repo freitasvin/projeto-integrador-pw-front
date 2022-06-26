@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import userIcon from '../../Images/Icons/User.png';
-import { UserButtonStyle } from './styles';
+import { UserButtonStyle, LinkStyled } from './styles';
 
 export function UserButton() {
   return (
     <UserButtonStyle className="user">
-      <div className="user-link">
+      <LinkStyled to="/login">
         <span>Login</span>
-      </div>
+      </LinkStyled>
 
-      <div className="user-icon">
-        <img src={userIcon} alt="user" />
-      </div>
+      <Link to="/login">
+        <img src={userIcon} alt="loginIcon" />
+      </Link>
     </UserButtonStyle>
   );
 }
