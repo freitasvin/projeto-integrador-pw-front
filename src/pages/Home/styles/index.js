@@ -27,9 +27,12 @@ export const SearchStyle = styled.div`
 export const SearchResultStyle = styled.div`
     min-width: 780px;
     min-height: 330px;
+    max-width: 780px;
+    max-height: 330px;
     border: 4px solid;
     border-color: #03B7DA;
     border-radius: 10px;
+    overflow-y: scroll;
 `;
 
 export const SearchResultLabelStyle = styled.div`

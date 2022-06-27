@@ -9,7 +9,7 @@ export const InputStyled = styled.input`
     width: 650px;
   `}
   ${(props) => props.size === 'large-medium' && `
-    width: 500px;
+    width: 440px;
     margin-right: 20px;
   `}
   ${(props) => props.size === 'medium' && `

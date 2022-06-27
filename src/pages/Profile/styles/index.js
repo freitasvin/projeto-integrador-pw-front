@@ -7,6 +7,8 @@ export const ContainerStyle = styled.div`
 `;
 
 export const MainStyle = styled.div`
+    font-weight: 500;
+    color: #03B7DA;
     height: 100vh;
     flex-basis: 75%;
     display: flex;
@@ -17,11 +19,26 @@ export const MainStyle = styled.div`
 
 export const FormStyled = styled.form`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  float: left;
+  align-items: center;
+  margin-top: 2%;
+
+  img {
+    padding-bottom: 20px;
+  }
+
+  input {
+    margin-bottom: 15px;
+  }
 `;
 
 export const Break = styled.div`
     height: 0;
     flex-basis: 100%
+`;
+
+export const ProfileIntroductionStyle = styled.div`
+
+
 `;

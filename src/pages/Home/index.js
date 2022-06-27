@@ -10,7 +10,7 @@ import { Api } from '../../services';
 export function Home() {
   const [ufs, setUfs] = useState([]);
   const [cities, setCities] = useState([]);
-  const [nieghborhoods, setNeighborhoods] = useState([]);
+  const [neighborhoods, setNeighborhoods] = useState([]);
   const [currentNeighborhood, setCurrentNeighborhood] = useState(0);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export function Home() {
     });
   };
 
-  const nieghborhoodHandler = (idNeighborhood) => {
+  const neighborhoodHandler = (idNeighborhood) => {
     setCurrentNeighborhood(idNeighborhood);
   };
 
@@ -68,9 +68,9 @@ export function Home() {
             ))}
           </DropMenuStyle>
 
-          <DropMenuStyle aria-label="Bairro Select" onChange={(e) => nieghborhoodHandler(e.target.value)}>
+          <DropMenuStyle aria-label="Bairro Select" onChange={(e) => neighborhoodHandler(e.target.value)}>
             <option hidden>Bairro</option>
-            {nieghborhoods && nieghborhoods.map((item) => (
+            {neighborhoods && neighborhoods.map((item) => (
               <option key={item.idNeighborhood} value={item.idNeighborhood}>
                 {item.name}
               </option>
