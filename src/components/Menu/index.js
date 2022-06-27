@@ -55,7 +55,16 @@ export function Menu() {
             <img src={logoutIcon} alt="logoutIcon" />
           </Link>
 
-          <LinkStyled to="/">
+          <LinkStyled
+            to="/"
+            onClick={() => {
+              localStorage.removeItem('idUser');
+              localStorage.removeItem('idLevel');
+              localStorage.removeItem('name');
+              localStorage.removeItem('email');
+              localStorage.removeItem('accessToken');
+            }}
+          >
             <span>Sair</span>
           </LinkStyled>
 

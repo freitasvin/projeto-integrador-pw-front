@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { IntroductionContainer } from '../../components/Introduction';
 import { ContainerStyle, MainStyle, FormStyled } from './styles';
 import { FormInput } from '../../components/FormInput';
@@ -67,12 +67,10 @@ export function Login() {
             value={password}
             onChangeHandler={onChangePasswordHandler}
           />
-          <Link to="/profile">
-            <FormSubmit
-              inputId="submit"
-              value="Entrar"
-            />
-          </Link>
+          <FormSubmit
+            inputId="submit"
+            value="Entrar"
+          />
         </FormStyled>
       </MainStyle>
     </ContainerStyle>

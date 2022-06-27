@@ -15,11 +15,11 @@ export function UserButton() {
 
   return (
     <UserButtonStyle className="user">
-      <LinkStyled to={userActive ? '/' : '/login'}>
+      <LinkStyled to={userActive ? '/profile' : '/login'}>
         <span>{ userActive ? 'Perfil' : 'Login' }</span>
       </LinkStyled>
 
-      <Link to={userActive ? '/' : '/login'}>
+      <Link to={userActive ? '/profile' : '/login'}>
         <img src={userIcon} alt="loginIcon" />
       </Link>
 
