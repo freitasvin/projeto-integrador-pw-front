@@ -7,10 +7,10 @@ export const ContainerStyle = styled.div`
 `;
 
 export const MainStyle = styled.div`
+    height: 100vh;
     flex-basis: 70%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
     justify-content: center;
 `;

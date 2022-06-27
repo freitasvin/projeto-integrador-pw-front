@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IntroductionContainer } from '../../components/Introduction';
 import { ContainerStyle, MainStyle, FormStyled } from './styles';
 import { FormInput } from '../../components/FormInput';
@@ -32,10 +33,12 @@ export function Login() {
             inputLabel="Senha"
             size="medium"
           />
-          <FormSubmit
-            inputId="submit"
-            value="Entrar"
-          />
+          <Link to="/profile">
+            <FormSubmit
+              inputId="submit"
+              value="Entrar"
+            />
+          </Link>
         </FormStyled>
       </MainStyle>
     </ContainerStyle>

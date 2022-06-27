@@ -11,25 +11,31 @@ export const SelectStyled = styled.select`
   ${(props) => props.size === 'large' && `
     width: 658px;
   `}
+  ${(props) => props.size === 'large-medium' && `
+    width: 558px;
+    margin-right: 20px;
+  `}
   ${(props) => props.size === 'medium' && `
     width: 318px;
+    margin-right: 20px;
   `}
   ${(props) => props.size === 'medium-small' && `
     width: 298px;
+    margin-right: 20px;
   `}
   ${(props) => props.size === 'small-medium' && `
     width: 188px;
+    margin-right: 20px;
   `}
   ${(props) => props.size === 'small' && `
-    width: 94px;
-    margin-right: 15px;
+    width: 104px;
+    margin-right: 30px;
   `}
 `;
 
 export const ItemStyle = styled.div`
   float: left;
   height: max-content;
-  margin-left: 20px;
 
   label {
     font-weight: 500;

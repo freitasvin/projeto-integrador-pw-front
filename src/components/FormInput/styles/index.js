@@ -8,25 +8,31 @@ export const InputStyled = styled.input`
   ${(props) => props.size === 'large' && `
     width: 650px;
   `}
+  ${(props) => props.size === 'large-medium' && `
+    width: 500px;
+    margin-right: 20px;
+  `}
   ${(props) => props.size === 'medium' && `
     width: 310px;
+    margin-right: 20px;
   `}
   ${(props) => props.size === 'medium-small' && `
     width: 290px;
+    margin-right: 20px;
   `}
   ${(props) => props.size === 'small-medium' && `
     width: 180px;
+    margin-right: 20px;
   `}
   ${(props) => props.size === 'small' && `
-    width: 84px;
-    margin-right: 15px;
+    width: 98px;
+    margin-right: 30px;
   `}
 `;
 
 export const ItemStyle = styled.div`
   float: left;
   height: max-content;
-  margin-left: 20px;
 
   label {
     font-weight: 500;

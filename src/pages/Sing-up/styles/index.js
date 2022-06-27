@@ -10,7 +10,7 @@ export const MainStyle = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 50px;
-  padding-right: 150px;
+  padding-right: 200px;
   margin-bottom: 2%;
 
   h1 {
@@ -18,7 +18,6 @@ export const MainStyle = styled.div`
     font-size: 20px;
     font-weight: 500;
     flex-basis: 100%;
-    margin: 0 0 0 20px;
   }
 `;
 
