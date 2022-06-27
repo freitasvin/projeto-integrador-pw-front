@@ -6,12 +6,20 @@ export function FormInput({
   inputId,
   inputLabel,
   size,
+  value,
+  onChangeHandler = () => {},
 }) {
   return (
     <ItemStyle>
       <label htmlFor={inputId}>
         {inputLabel}
-        <InputStyled type={type} id={inputId} size={size} />
+        <InputStyled
+          type={type}
+          id={inputId}
+          size={size}
+          value={value}
+          onChange={(e) => onChangeHandler(e)}
+        />
       </label>
     </ItemStyle>
   );

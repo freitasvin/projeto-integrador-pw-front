@@ -2,9 +2,12 @@ import React from 'react';
 import { SearchButtonStyle } from './styles';
 import SearchIcon from '../../Images/Icons/Lupa.png';
 
-export function SearchButton() {
+export function SearchButton({ handler = () => {} }) {
   return (
-    <SearchButtonStyle>
+    <SearchButtonStyle onClick={() => {
+      handler();
+    }}
+    >
       <img src={SearchIcon} alt="SearchIcon" />
     </SearchButtonStyle>
   );

@@ -5,12 +5,13 @@ import { SingUp } from './pages/Sing-up';
 import { Profile } from './pages/Profile';
 import { Login } from './pages/Login';
 import { GlobalStyle } from './styles/GlobalStyle';
+import { Toast } from './components/Toast';
 
 function App() {
   return (
 
     <div className="App">
-
+      <Toast />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

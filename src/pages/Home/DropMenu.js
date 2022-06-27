@@ -1,13 +1,13 @@
 import React from 'react';
 import { DropMenuStyle } from './styles';
 
-export function DropMenu({ type }) {
+export function DropMenu({ name, options, handler = () => {} }) {
   return (
-    <DropMenuStyle type={type} aria-label={`${type} Select`}>
-      <option value="0" hidden>{type}</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+    <DropMenuStyle type={name} aria-label={`${name} Select`}>
+      <option value={0} hidden>{name}</option>
+      {options && options.map((item) => (
+        <option value={item.idState} onClick={handler}>{item.uf}</option>
+      ))}
     </DropMenuStyle>
   );
 }
