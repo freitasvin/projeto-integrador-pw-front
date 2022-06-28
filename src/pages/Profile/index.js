@@ -11,7 +11,9 @@ import { ProfileIntroduction } from './ProfileIntroduction';
 export function Profile() {
   return (
     <ContainerStyle>
-      <Menu />
+      <Menu
+        activeProfile
+      />
       <MainStyle>
         <ProfileIntroduction
           title="Meu perfil"

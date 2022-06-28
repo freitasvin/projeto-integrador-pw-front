@@ -9,7 +9,10 @@ import userIcon from '../../Images/Icons/User.png';
 import logoutIcon from '../../Images/Icons/Sair.png';
 import logo from '../../Images/Nursery-Logo/logo-1.png';
 
-export function Menu() {
+export function Menu({
+  activeProfile = false,
+  activeRegistration = false,
+}) {
   return (
     <NavigationContainerStyle>
       <MenuStyle>
@@ -25,29 +28,57 @@ export function Menu() {
 
         </MenuItemStyle>
 
-        <MenuItemStyle>
+        {activeProfile ? (
+          <MenuItemStyle>
 
-          <Link to="/profile">
-            <img src={userIcon} alt="userIcon" />
-          </Link>
+            <Link to="/profile">
+              <img src={userIcon} alt="userIcon" />
+            </Link>
 
-          <LinkStyled to="/profile">
-            <span>Perfil</span>
-          </LinkStyled>
+            <LinkStyled to="/profile" activeProfile>
+              <span>Perfil</span>
+            </LinkStyled>
 
-        </MenuItemStyle>
+          </MenuItemStyle>
+        ) : (
+          <MenuItemStyle>
 
-        <MenuItemStyle>
+            <Link to="/profile">
+              <img src={userIcon} alt="userIcon" />
+            </Link>
 
-          <Link to="/matricula">
-            <img src={registrationIcon} alt="registrationIcon" />
-          </Link>
+            <LinkStyled to="/profile">
+              <span>Perfil</span>
+            </LinkStyled>
 
-          <LinkStyled to="/matricula">
-            <span>Matricula(s)</span>
-          </LinkStyled>
+          </MenuItemStyle>
+        )}
 
-        </MenuItemStyle>
+        {activeRegistration ? (
+          <MenuItemStyle>
+
+            <Link to="/registration">
+              <img src={registrationIcon} alt="registrationIcon" />
+            </Link>
+
+            <LinkStyled to="/registration" activeRegistration>
+              <span>Matricula(s)</span>
+            </LinkStyled>
+
+          </MenuItemStyle>
+        ) : (
+          <MenuItemStyle>
+
+            <Link to="/registration">
+              <img src={registrationIcon} alt="registrationIcon" />
+            </Link>
+
+            <LinkStyled to="/registration">
+              <span>Matricula(s)</span>
+            </LinkStyled>
+
+          </MenuItemStyle>
+        )}
 
         <MenuItemStyle>
 

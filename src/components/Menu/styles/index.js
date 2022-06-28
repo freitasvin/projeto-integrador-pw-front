@@ -31,7 +31,6 @@ export const MenuItemStyle = styled.div`
         height: 35px;
         margin-right: 10px;
     }
-
 `;
 
 export const LogoStyle = styled.div`
@@ -48,6 +47,9 @@ export const LinkStyled = styled(Link)`
     text-decoration: none;
     color: white;
     transition: border-bottom;
+
+    ${(props) => props.activeProfile && 'border-bottom: solid 1px white;'}
+    ${(props) => props.activeRegistration && 'border-bottom: solid 1px white;'}
 
     h3 {
         font-size: 25px;
