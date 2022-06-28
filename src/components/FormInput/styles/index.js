@@ -17,7 +17,7 @@ export const InputStyled = styled.input`
     margin-right: 20px;
   `}
   ${(props) => props.size === 'medium-small' && `
-    width: 290px;
+    width: 230px;
     margin-right: 20px;
   `}
   ${(props) => props.size === 'small-medium' && `

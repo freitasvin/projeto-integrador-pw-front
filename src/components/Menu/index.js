@@ -28,57 +28,29 @@ export function Menu({
 
         </MenuItemStyle>
 
-        {activeProfile ? (
-          <MenuItemStyle>
+        <MenuItemStyle>
 
-            <Link to="/profile">
-              <img src={userIcon} alt="userIcon" />
-            </Link>
+          <Link to="/profile">
+            <img src={userIcon} alt="userIcon" />
+          </Link>
 
-            <LinkStyled to="/profile" activeProfile>
-              <span>Perfil</span>
-            </LinkStyled>
+          <LinkStyled to="/profile" activeProfile={activeProfile}>
+            <span>Perfil</span>
+          </LinkStyled>
 
-          </MenuItemStyle>
-        ) : (
-          <MenuItemStyle>
+        </MenuItemStyle>
 
-            <Link to="/profile">
-              <img src={userIcon} alt="userIcon" />
-            </Link>
+        <MenuItemStyle>
 
-            <LinkStyled to="/profile">
-              <span>Perfil</span>
-            </LinkStyled>
+          <Link to="/registration">
+            <img src={registrationIcon} alt="registrationIcon" />
+          </Link>
 
-          </MenuItemStyle>
-        )}
+          <LinkStyled to="/registration" activeRegistration={activeRegistration}>
+            <span>Matricula(s)</span>
+          </LinkStyled>
 
-        {activeRegistration ? (
-          <MenuItemStyle>
-
-            <Link to="/registration">
-              <img src={registrationIcon} alt="registrationIcon" />
-            </Link>
-
-            <LinkStyled to="/registration" activeRegistration>
-              <span>Matricula(s)</span>
-            </LinkStyled>
-
-          </MenuItemStyle>
-        ) : (
-          <MenuItemStyle>
-
-            <Link to="/registration">
-              <img src={registrationIcon} alt="registrationIcon" />
-            </Link>
-
-            <LinkStyled to="/registration">
-              <span>Matricula(s)</span>
-            </LinkStyled>
-
-          </MenuItemStyle>
-        )}
+        </MenuItemStyle>
 
         <MenuItemStyle>
 
