@@ -33,6 +33,7 @@ export const SearchResultStyle = styled.div`
     border-color: #03B7DA;
     border-radius: 10px;
     overflow-y: scroll;
+    padding: 15px;
 `;
 
 export const SearchResultLabelStyle = styled.div`

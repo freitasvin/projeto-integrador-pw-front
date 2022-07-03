@@ -6,12 +6,14 @@ import {
 import { SearchButton } from './SearchButton';
 import locale from '../../Images/Icons/Localização.png';
 import { Api } from '../../services';
+import { NurseryCard } from '../../components/nurseryCard';
 
 export function Home() {
   const [ufs, setUfs] = useState([]);
   const [cities, setCities] = useState([]);
   const [neighborhoods, setNeighborhoods] = useState([]);
   const [currentNeighborhood, setCurrentNeighborhood] = useState(0);
+  const [nurseriesList, setNurseriesList] = useState([]);
 
   useEffect(() => {
     Api.get('ufs').then((res) => {
@@ -37,7 +39,7 @@ export function Home() {
 
   const searchButtonHandler = () => {
     Api.get(`neighborhoods/${currentNeighborhood}/nurseries`).then((res) => {
-      console.log(res.data);
+      setNurseriesList(res.data);
     });
   };
 
@@ -86,7 +88,20 @@ export function Home() {
               Creches disponíveis na sua região
             </span>
           </SearchResultLabelStyle>
-          <SearchResultStyle />
+          <SearchResultStyle>
+            {nurseriesList.length > 0 && nurseriesList.map((nursery) => (
+              <NurseryCard
+                image={nursery.image}
+                name={nursery.name}
+                phone={nursery.phone}
+                street={nursery.street}
+                number={nursery.number}
+                complement={nursery.complement}
+                idNursery={nursery.idNursery}
+                key={nursery.idNursery}
+              />
+            ))}
+          </SearchResultStyle>
         </div>
 
       </MainStyle>
