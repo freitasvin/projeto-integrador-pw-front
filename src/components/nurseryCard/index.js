@@ -11,9 +11,10 @@ export function NurseryCard({
   street,
   number,
   complement,
+  idNursery,
 }) {
   return (
-    <LinkStyled to="/">
+    <LinkStyled to={`/nursery/${idNursery}`}>
       <NurseryCardContainer>
         <NurseryImage src={image || defaultImage} />
         <NurseryCardContent>

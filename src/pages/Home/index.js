@@ -6,7 +6,7 @@ import {
 import { SearchButton } from './SearchButton';
 import locale from '../../Images/Icons/Localização.png';
 import { Api } from '../../services';
-import { NurseryCard } from '../../components/nurseryCard';
+import { NurseryCard } from '../../components/NurseryCard';
 
 export function Home() {
   const [ufs, setUfs] = useState([]);
