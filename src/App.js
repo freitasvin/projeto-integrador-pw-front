@@ -8,6 +8,7 @@ import { Registration } from './pages/Registration';
 import { GlobalStyle } from './styles/GlobalStyle';
 import { Toast } from './components/Toast';
 import { Nursery } from './pages/Nursery';
+import { Registrate } from './pages/Registrate';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/nursery/:idNursery" element={<Nursery />} />
+          <Route path="/nursery/:idNursery/registration/:idVacancy" element={<Registrate />} />
           <Route path="/*" element={<h1>Error 404 Not Found!</h1>} />
         </Routes>
       </BrowserRouter>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SubmitStyled = styled.input`
   height: 30px;
-  width: 100px;
+  width: 150px;
   color: white;
   background: linear-gradient(180deg, #30DFF2 0%, #00B4D8 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

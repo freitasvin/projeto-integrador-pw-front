@@ -30,6 +30,37 @@ export const InputStyled = styled.input`
   `}
 `;
 
+export const TextAreaStyled = styled.textarea`
+  margin-top: 5px;
+  height: 200px;
+  border: 2px solid #797979;
+  border-radius: 10px;
+
+  ${(props) => props.size === 'large' && `
+    width: 650px;
+  `}
+  ${(props) => props.size === 'large-medium' && `
+    width: 440px;
+    margin-right: 20px;
+  `}
+  ${(props) => props.size === 'medium' && `
+    width: 310px;
+    margin-right: 20px;
+  `}
+  ${(props) => props.size === 'medium-small' && `
+    width: 230px;
+    margin-right: 20px;
+  `}
+  ${(props) => props.size === 'small-medium' && `
+    width: 180px;
+    margin-right: 20px;
+  `}
+  ${(props) => props.size === 'small' && `
+    width: 98px;
+    margin-right: 30px;
+  `}
+`;
+
 export const ItemStyle = styled.div`
   float: left;
   height: max-content;

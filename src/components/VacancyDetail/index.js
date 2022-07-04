@@ -1,17 +1,24 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { VacancyDetailContent, VacancyButton } from './styles';
+import { notifyError } from '../../utils/toastEmitter';
 
 export function VacancyDetail({
   className,
   vacancies,
   description,
-  // idVacancy,
+  idVacancy,
+  idNursery,
 }) {
   const navigate = useNavigate();
 
   const handlerButton = () => {
-    navigate('/');
+    const idUser = localStorage.getItem('idUser');
+    if (idUser) {
+      navigate(`/nursery/${idNursery}/registration/${idVacancy}`);
+    } else {
+      notifyError('Você deve realizar login para solicitar uma matrícula');
+    }
   };
 
   return (

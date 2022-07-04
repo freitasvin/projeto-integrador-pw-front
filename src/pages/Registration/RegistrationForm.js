@@ -38,7 +38,7 @@ export function RegistrationForm() {
           />
           <FormInput
             type="text"
-            inputId="sonBirthday"
+            inputId="sonBirthdate"
             inputLabel="Data de nascimento"
             size="small-medium"
           />

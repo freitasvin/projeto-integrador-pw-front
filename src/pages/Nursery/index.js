@@ -65,6 +65,7 @@ export function Nursery() {
               vacancies={vacancy.amount}
               description={vacancy.description}
               idVacancy={vacancy.idVacancy}
+              idNursery={nurseryDetail.idNursery}
               key={vacancy.idVacancy}
             />
           </VacancyContainer>
