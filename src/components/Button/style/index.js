@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SubmitStyled = styled.input`
+export const ButtonStyled = styled.button`
   height: 30px;
   width: 100px;
   color: white;
@@ -8,13 +8,5 @@ export const SubmitStyled = styled.input`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border-color: #30DFF2;
-`;
 
-export const ItemStyle = styled.div`
-  float: left;
-  height: max-content;
-
-  input {
-    margin-top: 5px;
-  }
 `;

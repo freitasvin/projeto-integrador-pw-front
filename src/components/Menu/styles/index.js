@@ -7,6 +7,7 @@ export const NavigationContainerStyle = styled.div`
     flex-direction: column;
     flex-basis: 25%;
     min-width: 25%;
+    max-width: 25%;
     color: white;
     box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
 `;

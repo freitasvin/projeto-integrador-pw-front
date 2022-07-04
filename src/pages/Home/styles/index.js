@@ -34,6 +34,7 @@ export const SearchResultStyle = styled.div`
     border-radius: 10px;
     overflow-y: scroll;
     padding: 15px;
+    align-items: center;
 `;
 
 export const SearchResultLabelStyle = styled.div`
