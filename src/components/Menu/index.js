@@ -42,11 +42,11 @@ export function Menu({
 
         <MenuItemStyle>
 
-          <Link to="/registration">
+          <Link to="/registrations">
             <img src={registrationIcon} alt="registrationIcon" />
           </Link>
 
-          <LinkStyled to="/registration" activeRegistration={activeRegistration}>
+          <LinkStyled to="/registrations" activeRegistration={activeRegistration}>
             <span>Matricula(s)</span>
           </LinkStyled>
 

@@ -9,11 +9,11 @@ export const ContainerStyle = styled.div`
 export const MainStyle = styled.div`
     font-weight: 500;
     color: #03B7DA;
-    height: 100vh;
+    max-height: 100vh;
     flex-basis: 75%;
     display: flex;
     flex-direction: column;
-    padding: 50px 100px 0px 100px;
+    padding: 50px 85px 0px 100px;
 `;
 
 export const FormStyled = styled.form`
@@ -22,7 +22,7 @@ export const FormStyled = styled.form`
   float: left;
   align-items: center;
   margin-top: 2%;
-  max-width: 66%;
+  max-width: 70%;
 
   img {
     padding-bottom: 20px;

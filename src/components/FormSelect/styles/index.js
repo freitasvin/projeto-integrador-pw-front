@@ -16,7 +16,7 @@ export const SelectStyled = styled.select`
     margin-right: 20px;
   `}
   ${(props) => props.size === 'medium' && `
-    width: 318px;
+    width: 310px;
     margin-right: 20px;
   `}
   ${(props) => props.size === 'medium-small' && `
@@ -24,11 +24,11 @@ export const SelectStyled = styled.select`
     margin-right: 20px;
   `}
   ${(props) => props.size === 'small-medium' && `
-    width: 188px;
-    margin-right: 20px;
+    width: 180px;
+    margin-right: 25px;
   `}
   ${(props) => props.size === 'small' && `
-    width: 104px;
+    width: 98px;
     margin-right: 30px;
   `}
 `;
@@ -42,7 +42,7 @@ export const ItemStyle = styled.div`
     color: #03B7DA;
   }
 
-  input {
+  select {
     margin-top: 5px;
   }
 

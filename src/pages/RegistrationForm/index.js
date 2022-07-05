@@ -6,7 +6,7 @@ import {
 import { FormInput } from '../../components/FormInput';
 import { Button } from '../../components/Button';
 import { Menu } from '../../components/Menu';
-import { RegistrationIntroduction } from './RegistrationIntroduction';
+import { RegistrationIntroduction } from '../../components/RegistrationIntroduction';
 import vacancyApproved from '../../Images/Icons/vaga-aprovada.png';
 
 export function RegistrationForm() {
@@ -38,7 +38,7 @@ export function RegistrationForm() {
           />
           <FormInput
             type="text"
-            inputId="sonBirthdate"
+            inputId="sonBirthDate"
             inputLabel="Data de nascimento"
             size="small-medium"
           />

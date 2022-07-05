@@ -14,16 +14,7 @@ export const MainStyle = styled.div`
     display: flex;
     flex-basis: 75%;
     flex-direction: column;
-    padding-left: 50px;
-    padding-right: 100px;
-
-  h1 {
-    color: #03B7DA;
-    font-size: 20px;
-    font-weight: 500;
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
+    padding: 50px 100px 0 100px;
 
   img {
     margin-bottom: 20px;
@@ -55,29 +46,26 @@ export const BreakStyle = styled.div`
 `;
 
 export const RegistrationIntroductionStyle = styled.div`
+  h4, h2{
+    font-weight: 400;
+    background: -webkit-linear-gradient(#30DFF2, #00ADC0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    margin-top: 20px;
+    }
 `;
 
 export const RegistrationsStyle = styled.div`
-  width: 500px;
-  height: 420px;
+  width: 800px;
+  height: 470px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   
-  border: 4px solid;
-  border-color: #03B7DA;
-  border-radius: 10px;
   overflow-y: scroll;
 `;
 
 export const LinkStyled = styled(Link)`
     text-decoration: none;
     color: #03B7DA;
-    transition: border-bottom;
-    margin-top: 20px;
-
-
-    &:hover { 
-        border-bottom: solid 1px #03B7DA;
-        }
     `;

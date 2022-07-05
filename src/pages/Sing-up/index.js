@@ -64,21 +64,18 @@ export function SingUp() {
           <h1>Informações do endereço</h1>
 
           <FormSelect
-            type="text"
             inputId="select-state"
             inputLabel="Estado"
             size="small"
           />
 
           <FormSelect
-            type="text"
             inputId="select-city"
             inputLabel="Cidade"
             size="small-medium"
           />
 
           <FormSelect
-            type="text"
             inputId="select-neighborhood"
             inputLabel="Bairro"
             size="medium"

@@ -14,7 +14,7 @@ export const InputStyled = styled.input`
   `}
   ${(props) => props.size === 'medium' && `
     width: 310px;
-    margin-right: 20px;
+    margin-right: 28px;
   `}
   ${(props) => props.size === 'medium-small' && `
     width: 230px;
@@ -22,7 +22,7 @@ export const InputStyled = styled.input`
   `}
   ${(props) => props.size === 'small-medium' && `
     width: 180px;
-    margin-right: 20px;
+    margin-right: 25px;
   `}
   ${(props) => props.size === 'small' && `
     width: 98px;
@@ -72,6 +72,8 @@ export const ItemStyle = styled.div`
 
   input {
     margin-top: 5px;
+    box-sizing: border-box;
+    padding: 10px 0 13px 10px;
   }
 
   input, label {

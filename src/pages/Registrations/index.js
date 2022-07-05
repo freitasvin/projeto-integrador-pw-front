@@ -3,9 +3,10 @@ import { Menu } from '../../components/Menu';
 import {
   MainStyle, ContainerStyle, RegistrationsStyle, LinkStyled,
 } from './styles';
-import { RegistrationIntroduction } from './RegistrationIntroduction';
+import { RegistrationIntroduction } from '../../components/RegistrationIntroduction';
+import { RegistrationCard } from '../../components/RegistrationCard';
 
-export function Registration() {
+export function Registrations() {
   return (
     <ContainerStyle>
       <Menu
@@ -20,8 +21,12 @@ export function Registration() {
         />
 
         <RegistrationsStyle>
-          <LinkStyled to="/registration/1">
-            <span>Vinícius de Almeida Freitas | Situação: Aprovado</span>
+          <LinkStyled to="/registrations">
+            <RegistrationCard
+              name="Vinícius de Almeida Freitas"
+              className="Maternal 1"
+              situation="approved"
+            />
           </LinkStyled>
         </RegistrationsStyle>
 

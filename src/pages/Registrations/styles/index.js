@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const ContainerStyle = styled.div`
   display: flex;
@@ -9,19 +10,20 @@ export const ContainerStyle = styled.div`
 export const MainStyle = styled.div`
     font-weight: 500;
     color: #03B7DA;
-    height: 100vh;
     display: flex;
+    max-height: 100vh;
     flex-basis: 75%;
     flex-direction: column;
-    padding-left: 50px;
-    padding-right: 100px;
-    justify-content: space-around;
+    padding: 50px 100px 0 100px;
 
   h1 {
-    color: #03B7DA;
     font-size: 20px;
     font-weight: 500;
     flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  img {
     margin-bottom: 20px;
   }
 `;
@@ -31,11 +33,17 @@ export const FormStyled = styled.form`
   flex-wrap: wrap;
   float: left;
   align-items: center;
-  max-width: 87%;
-
 
   input {
     margin-bottom: 15px;
+  }
+
+  img {
+    width: 270px;
+  }
+
+  button {
+    float: right;
   }
 `;
 
@@ -43,3 +51,17 @@ export const BreakStyle = styled.div`
   flex-basis: 100%;
   height: 0;
 `;
+
+export const RegistrationsStyle = styled.div`
+  width: 800px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  
+  overflow-y: scroll;
+`;
+
+export const LinkStyled = styled(Link)`
+    text-decoration: none;
+    color: #03B7DA;
+    `;
