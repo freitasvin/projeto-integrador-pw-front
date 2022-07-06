@@ -9,6 +9,7 @@ import { Toast } from './components/Toast';
 import { Nursery } from './pages/Nursery';
 import { Registrate } from './pages/Registrate';
 import { RegistrationRedirector } from './redirectors/registrationRedirector';
+import { NurseryRedirector } from './redirectors/nurseryRedirector';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/sign-up" element={<SingUp />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/registrations" element={<RegistrationRedirector />} />
+          <Route path="/adminNursery" element={<NurseryRedirector />} />
           <Route path="/nurseries" element={<Nursery />} />
           <Route path="/nursery/:idNursery" element={<Nursery />} />
           <Route path="/nursery/:idNursery/registration/:idVacancy" element={<Registrate />} />

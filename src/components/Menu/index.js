@@ -59,11 +59,11 @@ export function Menu({
         {idLevel !== 3 && (
         <MenuItemStyle>
 
-          <Link to="/new-nursery">
+          <Link to="/adminNursery">
             <img src={nurseryIcon} alt="nurseryIcon" />
           </Link>
 
-          <LinkStyled to="/new-nursery" activeNursery={activeNursery}>
+          <LinkStyled to="/adminNursery" activeNursery={activeNursery}>
             <span>Creche</span>
           </LinkStyled>
 

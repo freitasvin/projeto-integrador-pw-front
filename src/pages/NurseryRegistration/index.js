@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
-  FormStyled, ContainerStyle, MainStyle,
+  FormStyled, ContainerStyle, MainStyle, BreakStyle,
 } from './styles';
 import { Menu } from '../../components/Menu';
 import { FormInput } from '../../components/FormInput';
-import { FormSelect } from '../../components/FormSelect';
-import { FormSubmit } from '../../components/FormSubmit';
 import { RegistrationIntroduction } from '../../components/RegistrationIntroduction';
+import { FormSubmit } from '../../components/FormSubmit';
 
 export function NurseryRegistration() {
-  return (
+  const [currentNursery, setCurrentNursery] = useState({});
+  const [className, setClassName] = useState('');
+  const [amount, setAmount] = useState('');
+  const [description, setDescription] = useState('');
 
+  useEffect(() => {
+    const nursery = JSON.parse(localStorage.getItem('currentNursery'));
+    setCurrentNursery(nursery);
+  }, []);
+
+  const createVacancy = () => {
+    let vacancies = [];
+    vacancies = JSON.parse(localStorage.getItem('vacancies'));
+    vacancies.push({ className, amount, description });
+    localStorage.setItem('vacancies', JSON.stringify(vacancies));
+  };
+
+  return (
     <ContainerStyle>
       <Menu
         activeNursery
@@ -19,36 +34,26 @@ export function NurseryRegistration() {
       <MainStyle>
 
         <RegistrationIntroduction
-          title="Minhas matrícula(s)"
-          subTitle="Verifique as informações referente a matrículas"
+          title="Informações da creche"
+          subTitle="Verifique as informações referente a sua creche"
           addNurseryImage
         />
 
-        <FormStyled id="form2">
-          <h1>Informações da creche</h1>
-
+        <FormStyled id="form2" onSubmit={() => { createVacancy(); }}>
           <FormInput
             type="text"
             inputId="nurseryName"
             inputLabel="Nome da Creche"
+            disabled
+            value={currentNursery.nurseryName}
             size="large"
           />
-
-          <FormSelect
-            inputId="select-state"
-            inputLabel="Estado"
-            size="small"
-          />
-
-          <FormSelect
-            inputId="select-city"
-            inputLabel="Cidade"
-            size="small-medium"
-          />
-
-          <FormSelect
-            inputId="select-neighborhood"
-            inputLabel="Bairro"
+          <FormInput
+            type="text"
+            inputId="street"
+            inputLabel="Rua"
+            disabled
+            value={currentNursery.street}
             size="medium"
           />
 
@@ -56,6 +61,8 @@ export function NurseryRegistration() {
             type="text"
             inputId="nursery-number"
             inputLabel="Numero"
+            disabled
+            value={currentNursery.number}
             size="small"
           />
 
@@ -63,6 +70,7 @@ export function NurseryRegistration() {
             type="text"
             inputId="postal-code"
             inputLabel="CEP"
+            value="85660-000"
             size="small-medium"
           />
 
@@ -70,6 +78,8 @@ export function NurseryRegistration() {
             type="text"
             inputId="complement"
             inputLabel="Complemento"
+            disabled
+            value={currentNursery.complement}
             size="medium"
           />
 
@@ -77,15 +87,45 @@ export function NurseryRegistration() {
             type="text"
             inputId="cnpj"
             inputLabel="CNPJ"
+            disabled
+            value={currentNursery.cnpj}
             size="medium"
           />
+
+          <h1>Cadastrar vagas</h1>
+          <FormInput
+            type="text"
+            inputId="className"
+            inputLabel="Nome da turma"
+            value={className}
+            onChangeHandler={(e) => {
+              setClassName(e.target.value);
+            }}
+            size="small-medium"
+          />
+          <FormInput
+            type="text"
+            inputId="amount"
+            inputLabel="Quantidade de vagas"
+            value={amount}
+            onChangeHandler={(e) => {
+              setAmount(e.target.value);
+            }}
+            size="small-medium"
+          />
+          <FormInput
+            type="text"
+            inputId="description"
+            inputLabel="Descrição da turma"
+            value={description}
+            onChangeHandler={(e) => {
+              setDescription(e.target.value);
+            }}
+            size="small-medium"
+          />
+          <BreakStyle />
+          <FormSubmit inputId="Cadastrar vagas" value="Cadastrar vagas" />
         </FormStyled>
-
-        <FormSubmit
-          inputId="submit"
-          value="Solicitar"
-        />
-
       </MainStyle>
     </ContainerStyle>
   );
