@@ -13,7 +13,7 @@ export function NurseryRegistration() {
 
     <ContainerStyle>
       <Menu
-        activedNursery
+        activeNursery
       />
 
       <MainStyle>

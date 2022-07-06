@@ -60,7 +60,7 @@ export function Menu({
             <img src={nurseryIcon} alt="nurseryIcon" />
           </Link>
 
-          <LinkStyled to="/new-nursery" activeNusery={activeNursery}>
+          <LinkStyled to="/new-nursery" activeNursery={activeNursery}>
             <span>Creche</span>
           </LinkStyled>
 
