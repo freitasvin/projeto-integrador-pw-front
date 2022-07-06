@@ -15,6 +15,8 @@ export function RegistrationCard({
       </RegistrationCardContent>
       {situation === 'approved'
       && <RegistrationImage src={vacancyApproved} alt="situationImage" />}
+      {situation === 'pending' && <h4 style={{ color: 'blue' }}>Matricula pendente</h4> }
+      {situation === 'refused' && <h4 style={{ color: 'red' }}>Matricula recusada</h4> }
     </RegistrationCardContainer>
   );
 }

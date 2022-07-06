@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu } from '../../components/Menu';
 import {
   MainStyle, ContainerStyle, RegistrationsStyle, LinkStyled,
@@ -7,6 +7,13 @@ import { RegistrationIntroduction } from '../../components/RegistrationIntroduct
 import { RegistrationCard } from '../../components/RegistrationCard';
 
 export function Registrations() {
+  const [registrations, setRegistrations] = useState([]);
+
+  useEffect(() => {
+    const reg = JSON.parse(localStorage.getItem('registrations'));
+    setRegistrations(reg || []);
+  }, []);
+
   return (
     <ContainerStyle>
       <Menu
@@ -20,15 +27,23 @@ export function Registrations() {
           subTitle="Verifique as informações referente a matrículas"
         />
 
-        <RegistrationsStyle>
-          <LinkStyled to="/registrations">
-            <RegistrationCard
-              name="Vinícius de Almeida Freitas"
-              className="Maternal 1"
-              situation="approved"
-            />
-          </LinkStyled>
-        </RegistrationsStyle>
+        {registrations.length > 0 ? (
+          <RegistrationsStyle>
+            <LinkStyled to="/registrations">
+              {registrations.map((regis) => (
+                <RegistrationCard
+                  name={regis.childrenName}
+                  className={regis.className}
+                  situation={regis.situation}
+                />
+              )) }
+
+            </LinkStyled>
+          </RegistrationsStyle>
+        )
+          : (
+            <RegistrationIntroduction subTitle="Você não possui nenhuma matricula pendente ou ativa" />
+          )}
 
       </MainStyle>
     </ContainerStyle>

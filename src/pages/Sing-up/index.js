@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IntroductionContainer } from '../../components/Introduction';
 import { FormInput } from '../../components/FormInput';
 import { FormSelect } from '../../components/FormSelect';
@@ -8,10 +9,11 @@ import {
   ContainerStyle, MainStyle, FormStyled, BreakStyle,
 } from './styles';
 
-import { notifyError } from '../../utils/toastEmitter';
+import { notifyError, notifySuccess } from '../../utils/toastEmitter';
 import { Api } from '../../services';
 
 export function SingUp() {
+  const navigate = useNavigate();
   const [userFormData, setUserFormData] = useState({
     name: '',
     cpf: '000.000.000-00',
@@ -26,7 +28,7 @@ export function SingUp() {
       idNeighborhood: 1,
       postalCode: '',
       street: '',
-      number: '',
+      number: 0,
       complement: '',
     },
   });
@@ -39,7 +41,15 @@ export function SingUp() {
     }
 
     Api.post('signup', userFormData).then((res) => {
-      console.log(res);
+      notifySuccess('Usuário cadastrado com sucesso');
+      localStorage.setItem('accessToken', res.data.accessToken);
+      localStorage.setItem('idUser', res.data.idUser);
+      localStorage.setItem('idLevel', res.data.idLevel);
+      localStorage.setItem('name', res.data.name);
+      localStorage.setItem('email', res.data.email);
+      navigate('/');
+    }).catch((err) => {
+      notifyError(err.response.data.error);
     });
   };
 
@@ -145,12 +155,12 @@ export function SingUp() {
             inputId="street"
             inputLabel="Nome da rua"
             size="large"
-            value={userFormData.address.number}
+            value={userFormData.address.street}
             onChangeHandler={(e) => {
               setUserFormData({
                 ...userFormData,
                 address: {
-                  ...userFormData.address, number: e.target.value,
+                  ...userFormData.address, street: e.target.value,
                 },
               });
             }}
@@ -161,12 +171,12 @@ export function SingUp() {
             inputId="house-number"
             inputLabel="Nº da casa"
             size="medium-small"
-            value={userFormData.address.street}
+            value={userFormData.address.number}
             onChangeHandler={(e) => {
               setUserFormData({
                 ...userFormData,
                 address: {
-                  ...userFormData.address, street: e.target.value,
+                  ...userFormData.address, number: parseInt(e.target.value, 10),
                 },
               });
             }}

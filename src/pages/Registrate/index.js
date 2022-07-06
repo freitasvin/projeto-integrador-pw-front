@@ -49,7 +49,6 @@ export function Registrate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('chamou');
     Api.post(`/nurseries/${idNursery}/vacancies/${idVacancy}/registration`, {
       childrenName,
       childrenBirthdate,
@@ -58,6 +57,17 @@ export function Registrate() {
       information: observations,
     }, { headers: { authorization: localStorage.getItem('accessToken') } })
       .then(() => {
+        const reg = localStorage.getItem('registrations');
+        const newReg = {
+          idRegistration: new Date().getTime(), childrenName, childrenBirthdate, motherName, fatherName, information: observations, situation: 'pending', className: 'Maternal 1',
+        };
+        if (reg) {
+          reg.push(newReg);
+          localStorage.setItem('registrations', JSON.stringify(reg));
+        } else {
+          localStorage.setItem('registrations', JSON.stringify([newReg]));
+        }
+
         notifySuccess('Matrícula solicitada com sucesso');
         setChildrenName('');
         setchildrenBirthdate('');
@@ -65,7 +75,6 @@ export function Registrate() {
         setMotherName('');
         setObservations('');
       }).catch((error) => {
-        console.log(error);
         notifyError(error.response.data.error);
       });
   };

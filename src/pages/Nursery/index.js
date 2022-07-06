@@ -58,7 +58,7 @@ export function Nursery() {
       </Container>
 
       <Container>
-        {vacancies.length > 0 && vacancies.map((vacancy) => (
+        {vacancies && vacancies.length > 0 && vacancies.map((vacancy) => (
           <VacancyContainer>
             <VacancyDetail
               className={vacancy.class}

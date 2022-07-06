@@ -15,6 +15,8 @@ export function Menu({
   activeRegistration = false,
   activeNursery = false,
 }) {
+  const idLevel = parseInt(localStorage.getItem('idLevel'), 10);
+
   return (
     <NavigationContainerStyle>
       <MenuStyle>
@@ -54,6 +56,7 @@ export function Menu({
 
         </MenuItemStyle>
 
+        {idLevel !== 3 && (
         <MenuItemStyle>
 
           <Link to="/new-nursery">
@@ -65,6 +68,7 @@ export function Menu({
           </LinkStyled>
 
         </MenuItemStyle>
+        )}
 
         <MenuItemStyle>
 

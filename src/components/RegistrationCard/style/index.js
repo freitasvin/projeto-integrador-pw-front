@@ -7,6 +7,12 @@ export const RegistrationCardContainer = styled.div`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   align-items: center;
   justify-content: space-between;
+
+  h4{
+    margin-right: 30px;
+    font-weight: 400;
+  }
+
   `;
 export const RegistrationCardContent = styled.div`
     display: flex;
