@@ -6,12 +6,14 @@ import {
 import homeIcon from '../../Images/Icons/Home.png';
 import registrationIcon from '../../Images/Icons/Matriculas.png';
 import userIcon from '../../Images/Icons/User.png';
+import nurseryIcon from '../../Images/Icons/alphabet.png';
 import logoutIcon from '../../Images/Icons/Sair.png';
 import logo from '../../Images/Nursery-Logo/logo-1.png';
 
 export function Menu({
   activeProfile = false,
   activeRegistration = false,
+  activeNursery = false,
 }) {
   return (
     <NavigationContainerStyle>
@@ -48,6 +50,18 @@ export function Menu({
 
           <LinkStyled to="/registrations" activeRegistration={activeRegistration}>
             <span>Matricula(s)</span>
+          </LinkStyled>
+
+        </MenuItemStyle>
+
+        <MenuItemStyle>
+
+          <Link to="/new-nursery">
+            <img src={nurseryIcon} alt="nurseryIcon" />
+          </Link>
+
+          <LinkStyled to="/new-nursery" activeNusery={activeNursery}>
+            <span>Creche</span>
           </LinkStyled>
 
         </MenuItemStyle>

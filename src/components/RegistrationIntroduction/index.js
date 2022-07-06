@@ -3,12 +3,14 @@ import {
   RegistrationIntroductionContent, RegistrationIntroductionStyle, NurseryImage, NurseryContent,
 } from './styles';
 import defaultImage from '../../Images/Icons/ImagemDefault.png';
+import { FormSubmit } from '../FormSubmit';
 
 export function RegistrationIntroduction({
   title,
   subTitle,
   image,
   nurseryName,
+  addNurseryImage = false,
 }) {
   return (
     <RegistrationIntroductionStyle>
@@ -33,6 +35,17 @@ export function RegistrationIntroduction({
         <h2>{nurseryName}</h2>
       </NurseryContent>
       )}
+
+      { addNurseryImage
+        && (
+        <NurseryContent>
+          <NurseryImage src={defaultImage} />
+          <FormSubmit
+            inputId="addImage"
+            value="Adicionar"
+          />
+        </NurseryContent>
+        )}
 
     </RegistrationIntroductionStyle>
   );

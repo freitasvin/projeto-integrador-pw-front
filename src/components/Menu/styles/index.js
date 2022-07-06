@@ -49,6 +49,7 @@ export const LinkStyled = styled(Link)`
 
     ${(props) => props.activeProfile && 'border-bottom: solid 1px white;'}
     ${(props) => props.activeRegistration && 'border-bottom: solid 1px white;'}
+    ${(props) => props.activedNursery && 'border-bottom: solid 1px white;'}
 
     h3 {
         font-size: 25px;
