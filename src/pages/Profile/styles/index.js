@@ -4,6 +4,15 @@ export const ContainerStyle = styled.div`
     display: flex;
     flex-direction: row;
     height: 100vh;
+
+    h4, h2{
+      font-weight: 400;
+      background: -webkit-linear-gradient(#30DFF2, #00ADC0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+      margin-top: 10px;
+    }
 `;
 
 export const MainStyle = styled.div`
@@ -34,17 +43,10 @@ export const FormStyled = styled.form`
 `;
 
 export const Break = styled.div`
-    height: 0;
+    height: 15px;
     flex-basis: 100%
 `;
 
 export const ProfileIntroductionStyle = styled.div`
-  h4, h2{
-    font-weight: 400;
-    background: -webkit-linear-gradient(#30DFF2, #00ADC0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    margin-top: 10px;
-  }
+  
 `;

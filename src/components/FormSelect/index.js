@@ -5,6 +5,7 @@ export function FormSelect({
   inputId,
   inputLabel,
   size,
+  values = [],
 }) {
   return (
     <ItemStyle>
@@ -13,7 +14,9 @@ export function FormSelect({
         <br />
         <SelectStyled id={inputId} size={size}>
           <option value="0" hidden> </option>
-          <option value="1">Teste</option>
+          {values.map((item) => (
+            <option value={item}>{item}</option>
+          ))}
         </SelectStyled>
       </label>
     </ItemStyle>

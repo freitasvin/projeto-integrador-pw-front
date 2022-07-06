@@ -51,14 +51,14 @@ export const SearchButtonStyle = styled.button`
 export const TableContainer = styled.div`
   width: 800px;
   max-height: 290px;
-  min-height: 290px;
+  height: fit-content;
   border: 2px solid #797979;
   border-radius: 10px;
   overflow-y: scroll;
 `;
 
 export const TableStyled = styled.table`
-  width: 780px;
+  width: 800px;
   text-align: center;
   color: black;
   font-size: 15px;
@@ -84,7 +84,14 @@ export const TableStyled = styled.table`
   }
 
   td:last-child, th:last-child {
-  border :none;
+    border :none;
+    text-align: center;
   }
 
+  td:nth-child(4) {
+    color: green;
+  }
+  td:nth-child(5) {
+    color: red;
+  }
 `;

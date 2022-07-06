@@ -13,8 +13,7 @@ export const MainStyle = styled.div`
     display: flex;
     flex-basis: 75%;
     flex-direction: column;
-    padding-left: 50px;
-    padding-right: 100px;
+    padding: 0 100px  0 50px;
     justify-content: space-around;
 
   h1 {
@@ -31,7 +30,7 @@ export const FormStyled = styled.form`
   flex-wrap: wrap;
   float: left;
   align-items: center;
-  max-width: 87%;
+  max-width: 70%;
 
 
   input {

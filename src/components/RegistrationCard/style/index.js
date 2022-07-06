@@ -4,7 +4,7 @@ export const RegistrationCardContainer = styled.div`
   display: flex;
   width: 750px;
   height: 140px;
-  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   align-items: center;
   justify-content: space-between;
   `;

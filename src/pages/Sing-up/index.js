@@ -1,14 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IntroductionContainer } from '../../components/Introduction';
 import { FormInput } from '../../components/FormInput';
 import { FormSelect } from '../../components/FormSelect';
 import { FormAttachment } from '../../components/FormAttachment';
 import { FormSubmit } from '../../components/FormSubmit';
 import {
-  ContainerStyle, MainStyle, FormStyled,
+  ContainerStyle, MainStyle, FormStyled, BreakStyle,
 } from './styles';
 
+import { notifyError } from '../../utils/toastEmitter';
+import { Api } from '../../services';
+
 export function SingUp() {
+  const [userFormData, setUserFormData] = useState({
+    name: '',
+    cpf: '000.000.000-00',
+    rg: '0000000',
+    birthdate: '11/11/2001',
+    phone: '',
+    email: '',
+    password: '',
+    image: null,
+    repeatPassword: '',
+    address: {
+      idNeighborhood: 1,
+      postalCode: '',
+      street: '',
+      number: '',
+      complement: '',
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (userFormData.password !== userFormData.repeatPassword) {
+      notifyError('Senhas não conferem');
+      return;
+    }
+
+    Api.post('signup', userFormData).then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <ContainerStyle>
       <IntroductionContainer
@@ -26,6 +60,10 @@ export function SingUp() {
             inputId="entire-name"
             inputLabel="Nome Completo"
             size="large"
+            value={userFormData.name}
+            onChangeHandler={(e) => {
+              setUserFormData({ ...userFormData, name: e.target.value });
+            }}
           />
 
           <div className="break" />
@@ -35,6 +73,10 @@ export function SingUp() {
             inputId="email"
             inputLabel="E-mail"
             size="medium"
+            value={userFormData.email}
+            onChangeHandler={(e) => {
+              setUserFormData({ ...userFormData, email: e.target.value });
+            }}
           />
 
           <FormInput
@@ -42,6 +84,10 @@ export function SingUp() {
             inputId="phone"
             inputLabel="Telefone"
             size="medium"
+            value={userFormData.phone}
+            onChangeHandler={(e) => {
+              setUserFormData({ ...userFormData, phone: e.target.value });
+            }}
           />
 
           <FormInput
@@ -49,6 +95,10 @@ export function SingUp() {
             inputId="password"
             inputLabel="Crie uma senha"
             size="medium"
+            value={userFormData.password}
+            onChangeHandler={(e) => {
+              setUserFormData({ ...userFormData, password: e.target.value });
+            }}
           />
 
           <FormInput
@@ -56,36 +106,70 @@ export function SingUp() {
             inputId="password-repeat"
             inputLabel="Repita a senha"
             size="medium"
+            value={userFormData.repeatPassword}
+            onChangeHandler={(e) => {
+              setUserFormData({ ...userFormData, repeatPassword: e.target.value });
+            }}
           />
 
         </FormStyled>
 
-        <FormStyled id="form2">
+        <FormStyled id="form2" onSubmit={handleSubmit}>
           <h1>Informações do endereço</h1>
 
           <FormSelect
             inputId="select-state"
             inputLabel="Estado"
             size="small"
+            values={['PR', 'RO']}
           />
 
           <FormSelect
             inputId="select-city"
             inputLabel="Cidade"
             size="small-medium"
+            values={['Dois Vizinhos']}
           />
 
           <FormSelect
             inputId="select-neighborhood"
             inputLabel="Bairro"
             size="medium"
+            values={['Das torres']}
+          />
+
+          <BreakStyle />
+
+          <FormInput
+            type="text"
+            inputId="street"
+            inputLabel="Nome da rua"
+            size="large"
+            value={userFormData.address.number}
+            onChangeHandler={(e) => {
+              setUserFormData({
+                ...userFormData,
+                address: {
+                  ...userFormData.address, number: e.target.value,
+                },
+              });
+            }}
           />
 
           <FormInput
             type="text"
             inputId="house-number"
             inputLabel="Nº da casa"
-            size="small"
+            size="medium-small"
+            value={userFormData.address.street}
+            onChangeHandler={(e) => {
+              setUserFormData({
+                ...userFormData,
+                address: {
+                  ...userFormData.address, street: e.target.value,
+                },
+              });
+            }}
           />
 
           <FormInput
@@ -93,26 +177,45 @@ export function SingUp() {
             inputId="postal-code"
             inputLabel="CEP"
             size="small-medium"
+            value={userFormData.address.postalCode}
+            onChangeHandler={(e) => {
+              setUserFormData({
+                ...userFormData,
+                address: {
+                  ...userFormData.address, postalCode: e.target.value,
+                },
+              });
+            }}
           />
 
           <FormInput
             type="text"
             inputId="complement"
             inputLabel="Complemento"
-            size="medium"
+            size="small-medium"
+            value={userFormData.address.complement}
+            onChangeHandler={(e) => {
+              setUserFormData({
+                ...userFormData,
+                address: {
+                  ...userFormData.address, complement: e.target.value,
+                },
+              });
+            }}
           />
 
           <FormAttachment
             inputId="address-proof"
             inputLabel="Comprovante de residência"
           />
+
+          <BreakStyle />
+
+          <FormSubmit
+            inputId="submit"
+            value="Salvar"
+          />
         </FormStyled>
-
-        <FormSubmit
-          inputId="submit"
-          value="Salvar"
-        />
-
       </MainStyle>
     </ContainerStyle>
   );

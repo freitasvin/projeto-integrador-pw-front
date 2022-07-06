@@ -6,7 +6,7 @@ export const InputStyled = styled.input`
   border-radius: 10px;
 
   ${(props) => props.size === 'large' && `
-    width: 650px;
+    width: 645px;
   `}
   ${(props) => props.size === 'large-medium' && `
     width: 440px;
@@ -21,7 +21,7 @@ export const InputStyled = styled.input`
     margin-right: 20px;
   `}
   ${(props) => props.size === 'small-medium' && `
-    width: 180px;
+    width: 185px;
     margin-right: 25px;
   `}
   ${(props) => props.size === 'small' && `
